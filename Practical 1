@@ -2,7 +2,7 @@
 using namespace std;
 
 int n=0;
-int arr[];
+int arr[20];
 void create();
 void display();
 int main()
@@ -22,7 +22,8 @@ int main()
                                 break;
                             case 2:display();
                                 break;
-
+                            case 3:exit(1);
+                                break;
                             default:            cout<<"\nPlease enter a valid choice:";
                         }
             }
@@ -51,7 +52,7 @@ int main()
         cout<<"Array Elements are:-\n";
         for(i=0;i<n;i++)
             {
-                cout<<arr[i]<<"at position"<<" "<<i;
+                cout<<arr[i]<<" at position "<<" "<<i+1<<"\n";
             }
         }
     }
