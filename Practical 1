@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+
+int n=0;
+int arr[];
+void create();
+void display();
+int main()
+{
+    int choice;
+            while(1)
+            {
+                cout<<"\n\n~~~~MENU~~~~";
+                cout<<"\n=>1. Create an array of N integers";
+                cout<<"\n=>2. Display of array elements";
+                cout<<"\n=>3. Exit";
+                cout<<"\nEnter your choice: ";
+                cin>>choice;
+                switch(choice)
+                        {
+                            case 1:create();
+                                break;
+                            case 2:display();
+                                break;
+
+                            default:            cout<<"\nPlease enter a valid choice:";
+                        }
+            }
+            return 0;
+}
+    void create()
+    {
+        int i;
+        cout<<"Enter the number of elements";
+        cin>>n;
+        cout<<"Enter elements";
+        for(i=0;i<n;i++)
+        {
+        cin>>arr[i];
+        }
+    }
+    void display()
+    {
+        int i;
+        if(n==0)
+        {
+        cout<<"No element to display\n";
+        }
+        else
+        {
+        cout<<"Array Elements are:-\n";
+        for(i=0;i<n;i++)
+            {
+                cout<<arr[i]<<"at position"<<" "<<i;
+            }
+        }
+    }
